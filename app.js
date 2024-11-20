@@ -111,7 +111,7 @@ app.use((err,req,res,next)=>{
   res.status(statusCode).send(message);
 });
 
-
-app.listen(8000,()=>{
+const port = process.env.PORT || 8000;
+app.listen(port,()=>{
   console.log("Server working !! at http://localhost:8000/listings/index");
 });
